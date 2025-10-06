@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+    </div>
+
+    <div class="container">
+        <h1>Gerador de Senhas</h1>
+
+        <div class="senha-container">
+            <input type="text" id="senhaGerada" readonly>
+            <button id="copiarBtn">Copiar</button>
+        </div>
+
+        <div class="opcoes">
+            <div class="opcao">
+                <label for="comprimento">Comprimento da Senha: <span id="valorComprimento">12</span></label>
+                <input type="range" id="comprimento" min="4" max="32" value="12">
+            </div>
+
+            <div class="opcao">
+                <input type="checkbox" id="maiusculas" checked>
+                <label for="maiusculas">Incluir Letras Maiúsculas (A-Z)</label>
+            </div>
+
+            <div class="opcao">
+                <input type="checkbox" id="minusculas" checked>
+                <label for="minusculas">Incluir Letras Minúsculas (a-z)</label>
+            </div>
+
+            <div class="opcao">
+                <input type="checkbox" id="numeros" checked>
+                <label for="numeros">Incluir Números (0-9)</label>
+            </div>
+
+            <div class="opcao">
+                <input type="checkbox" id="simbolos" checked>
+                <label for="simbolos">Incluir Símbolos (!@#$...)</label>
+            </div>
+        </div>
+
+        <button class="gerar-btn" id="gerarSenha">Gerar Senha</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
